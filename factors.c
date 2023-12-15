@@ -4,7 +4,7 @@
 
 #define MAX 1024
 
-void factorize(unsigned int n)
+void factorize(long long n)
 {
 	long long i;
 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
 	char line[MAX];
 	FILE *file;
-	unsigned int num;
+	long long num;
 
 	if (argc != 2)
 	{
