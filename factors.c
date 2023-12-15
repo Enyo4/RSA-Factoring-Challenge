@@ -12,11 +12,11 @@ void factorize(long long n)
 	{
 		if (n % i == 0)
 		{
-			printf("%ld=%ld*%ld\n", n, n / i, i);
+			printf("%lld=%lld*%lld\n", n, n / i, i);
 			return;
 		}
 	}
-	printf("%ld=%ld*%ld\n", n, n, 1);
+	printf("%lld=%lld*%lld\n", n, n, 1);
 }
 
 int main(int argc, char *argv[])
