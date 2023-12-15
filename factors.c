@@ -2,26 +2,28 @@
 #include <stdlib.h>
 #include <math.h>
 
-void factorize(int n)
+#define MAX 1024
+
+void factorize(unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 2; i <= sqrt(n); ++i)
 	{
 		if (n % i == 0)
 		{
-			printf("%d=%d*%d\n", n, n / i, i);
+			printf("%u=%u*%u\n", n, n / i, i);
 			return;
 		}
 	}
-	printf("%d=%d*%d\n", n, n, 1);
+	printf("%u=%u*%u\n", n, n, 1);
 }
 
 int main(int argc, char *argv[])
 {
-	char line[20];
+	char line[MAX];
 	FILE *file;
-	int num;
+	unsigned int num;
 
 	if (argc != 2)
 	{
