@@ -6,17 +6,17 @@
 
 void factorize(unsigned int n)
 {
-	unsigned int i;
+	long long i;
 
 	for (i = 2; i <= sqrt(n); ++i)
 	{
 		if (n % i == 0)
 		{
-			printf("%u=%u*%u\n", n, n / i, i);
+			printf("%ld=%ld*%ld\n", n, n / i, i);
 			return;
 		}
 	}
-	printf("%u=%u*%u\n", n, n, 1);
+	printf("%ld=%ld*%ld\n", n, n, 1);
 }
 
 int main(int argc, char *argv[])
