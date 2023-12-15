@@ -10,7 +10,7 @@ void factorize(int n)
 	{
 		if (n % i == 0)
 		{
-			printf("%d=%d*%d\n", n, i, n / i);
+			printf("%d=%d*%d\n", n, n / i, i);
 			return;
 		}
 	}
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	if (file == NULL)
 	{
 		perror("Error opening file");
-		return (1);
+		exit(EXIT_FAILURE);
 	}
 
 	while (fgets(line, sizeof(line), file) != NULL)
@@ -42,6 +42,5 @@ int main(int argc, char *argv[])
 		factorize(num);
 	}
 	fclose(file);
-	return (0);
+	exit(EXIT_SUCCESS);
 }
-
